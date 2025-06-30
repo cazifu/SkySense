@@ -1,0 +1,318 @@
+/* --- Fuentes y Variables de Color --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --color-primario: #0b2d4d; /* Azul oscuro del título */
+  --color-fondo: #ffffff;
+  --color-texto: #333333;
+  --header-bg: rgba(11, 45, 77, 0.85); /* Fondo del header */
+  --border-color: #e0e0e0;
+}
+
+/* --- Estilos Globales --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+}
+
+/* --- Header Fijo y Navegación --- */
+.main-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: var(--header-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 15px 5%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo img {
+  height: 35px;
+}
+
+.logo span {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #aed6f1;
+}
+
+.nav-links li:not(:first-child)::before {
+  content: '•';
+  color: white;
+  margin-right: 25px;
+}
+
+/* --- Sección Hero (Imagen Principal) --- */
+.hero-section img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --- Secciones de Contenido General --- */
+.content-section {
+  padding: 60px 5%;
+  text-align: center;
+}
+
+.content-section h2 {
+  font-size: 2.5rem;
+  color: var(--color-primario);
+  margin-bottom: 20px;
+}
+
+.content-section h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 40px 0 30px 0;
+}
+
+.content-section > p {
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* --- Sección Estaciones Meteorológicas --- */
+.estaciones-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.estacion-card {
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.estacion-card:hover {
+  transform: translateY(-5px);
+}
+
+.estacion-card img {
+  width: 100%;
+  display: block;
+}
+
+.card-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+}
+
+.card-title h3 {
+  color: white;
+  margin: 0;
+  font-size: 2rem;
+}
+
+/* --- Sección Productos --- */
+.hardware-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid var(--border-color);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.hardware-item {
+  display: flex;
+}
+
+.hardware-item:nth-child(2n-1) {
+  border-right: 1px solid var(--border-color);
+}
+
+.hardware-item:nth-child(1), .hardware-item:nth-child(2) {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.hw-img-container, .hw-text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.hw-img-container {
+  width: 40%;
+}
+
+.hw-img-container img {
+  max-width: 100%;
+  max-height: 80px;
+}
+
+.hw-text-container {
+  width: 60%;
+  border-left: 1px solid var(--border-color);
+}
+
+.hw-text-container p {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--color-primario);
+}
+
+.software-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 1px;
+  background-color: var(--border-color);
+  border: 1px solid var(--border-color);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.software-item {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 15px;
+}
+
+.software-item img {
+  max-height: 60px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.logo-chartjs img {
+  max-height: 80px;
+}
+
+/* --- Footer con Ola --- */
+.main-footer-wave {
+  height: 150px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%230b2d4d" fill-opacity="1" d="M0,192L48,176C96,160,192,128,288,128C384,128,480,160,576,192C672,224,768,256,864,240C960,224,1056,160,1152,144C1248,128,1344,160,1392,176L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* --- Sección Creadores --- */
+.creadores-section {
+  background: linear-gradient(to bottom, #d6eaf8, #ffffff);
+  padding: 40px 5%;
+  text-align: center;
+}
+
+.creadores-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+.creador, .logo-central {
+  text-align: center;
+}
+
+.creador img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #0b2d4d;
+  margin-bottom: 10px;
+}
+
+.logo-central img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border-color: #ffffff00;
+  background-color: rgba(0, 0, 0, 0);
+
+}
+
+.creador p {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* --- Media Queries para Responsividad --- */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .estaciones-grid,
+  .hardware-grid,
+  .software-grid,
+  .creadores-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hardware-item:nth-child(2n-1) {
+    border-right: none;
+  }
+
+  .hardware-item {
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .hardware-item:last-child {
+    border-bottom: none;
+  }
+}

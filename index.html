@@ -1,15 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkySense</title>
+  <link rel="stylesheet" href="./css/estilos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+  <header class="main-header">
+    <nav class="navbar">
+      <div class="logo">
+        <img src="./fotos/Logo.png" alt="SkySense Logo">
+        <span>SkySense</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#hero">Inicio</a></li>
+        <li><a href="#estaciones">Estaciones meteorologicas</a></li>
+        <li><a href="#productos">Productos utilizados</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <Header> 
-    </Header>
-    
+  <main>
+    <section id="hero" class="hero-section">
+      <img src="./fotos/9cb41729-c252-4202-8d14-997d8a7e4dab.png" alt="Satélite SkySense en el cielo">
+    </section>
+
+    <section id="estaciones" class="content-section">
+      <h2>Estaciones Meteorologicas</h2>
+      <div class="estaciones-grid">
+        <div class="estacion-card">
+          <img src="./fotos/Parque Tortuguitas Bajo el Satélite.png" alt="Estacion Tortuguitas">
+          <div class="card-title"><h3>Tortuguitas</h3></div>
+        </div>
+        <div class="estacion-card">
+          <img src="./fotos/Parque Tortuguitas Bajo el Satélite.png" alt="Estacion Grand Bourg">
+          <div class="card-title"><h3>Grand Bourg</h3></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="productos" class="content-section">
+      <h2>Productos utilizados</h2>
+      <p>Estos son algunos de los productos que utilizamos para trabajar en nuestro proyecto Skysense</p>
+
+      <h3>HARDWARE</h3>
+      <div class="hardware-grid">
+        <div class="hardware-item">
+          <div class="hw-img-container"><img src="./fotos/placa.png" alt="Placa Arduino ESP8266"></div>
+          <div class="hw-text-container"><p>Placa Arduino ESP8266</p></div>
+        </div>
+        <div class="hardware-item">
+          <div class="hw-img-container"><img src="./fotos/sensorTemperatura.png" alt="Sensor de humedad"></div>
+          <div class="hw-text-container"><p>Sensor de humedad</p></div>
+        </div>
+        <div class="hardware-item">
+            <div class="hw-img-container"><img src="./fotos/bateria.png" alt="Batería de 5V"></div>
+            <div class="hw-text-container"><p>Bateria de 5V</p></div>
+        </div>
+        <div class="hardware-item">
+          <div class="hw-img-container"><img src="./fotos/modulo.png" alt="Sensor de temperatura"></div>
+          <div class="hw-text-container"><p>Sensor de temperatura</p></div>
+        </div>
+      </div>
+
+      <h3>SOFTWARE</h3>
+      <div class="software-grid">
+        <div class="software-item logos-3">
+          <img src="./fotos/css.png" alt="CSS">
+          <img src="./fotos/html.png" alt="HTML">
+          <img src="./fotos/js.png" alt="JavaScript">
+        </div>
+        <div class="software-item logo-chartjs">
+          <img src="./fotos/chartjs.png" alt="Chart.js">
+        </div>
+        <div class="software-item logo-arduino">
+          <img src="./fotos/arduino.png" alt="Arduino">
+        </div>
+        <div class="software-item logo-php">
+          <img src="./fotos/PHP.png" alt="PHP">
+        </div>
+      </div>
+    </section>
+
+    <section id="nosotros" class="content-section">
+        <h2>Nosotros</h2>
+        <p>Somos un equipo apasionado por la tecnología y la meteorología, dedicado a crear soluciones innovadoras para el monitoreo del clima en tiempo real.</p>
+    </section>
+
+    <section id="creadores" class="content-section creadores-section">
+      <h2>Creadores del proyecto</h2>
+      <div class="creadores-grid">
+
+        <div class="creador">
+          <img src="./fotos/lionel.jpg  " alt="Manuel Gonzalez">
+          <p><strong>Manuel Gonzalez</strong><br>Backend</p>
+        </div>
+        <div class="creador">
+          <img src="./fotos/lionel.jpg" alt="Santiago Gomez">
+          <p><strong>Santiago Gomez</strong><br>Frontend</p>
+        </div>
+        <div class="creador">
+          <img src="./fotos/lionel.jpg" alt="Roman Pascual">
+          <p><strong>Roman Pascual</strong><br>Backend</p>
+        </div>
+        <div class="creador">
+          <img src="./fotos/lionel.jpg" alt="Santiago Sardi">
+          <p><strong>Santiago Sardi</strong><br>Backend</p>
+        </div>
+        <div class="creador logo-central">
+          <img src="./fotos/Logo-negro.png" alt="Logo SkySense">
+        </div>
+        <div class="creador">
+          <img src="./fotos/lionel.jpg" alt="Thiago Herrera">
+          <p><strong>Thiago Herrera</strong><br>Frontend</p>
+        </div>
+        <div class="creador">
+          <img src="./fotos/lionel.jpg" alt="Lionel Clementi">
+          <p><strong>Lionel Clementi</strong><br>Frontend</p>
+        </div>
+        <div class="creador">
+          <img src="./fotos/lionel.jpg" alt="Bautista Incardona">
+          <p><strong>Bautista Incardona</strong><br>Backend</p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="main-footer-wave"></footer>
 </body>
-</html> 
+</html>
